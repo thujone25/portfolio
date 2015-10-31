@@ -1,0 +1,54 @@
+.section {
+	/*Box rules*/
+	padding: 4rem 0;
+	overflow: hidden;
+
+	/*Typography*/
+	text-align: center;
+}
+
+.section--white {
+	background-color: white;
+}
+
+.section--blue {
+	background-color: rgb(242, 245, 247);
+}
+
+.section--text-left {
+	text-align: left;
+}
+
+.section__title {
+	font-family: "Lato", sans-serif;
+	font-weight: bold;
+	font-size: 2.3rem;
+	color: rgb(80, 106, 133);
+}
+
+.section__text {
+	/*Box rules*/
+	margin: 0 15%;
+	margin-top: 1.2rem;
+
+	/*Typography*/
+	font-family: "Source Sans Pro", sans-serif;
+	font-size: 1.15rem;
+	color: rgb(115, 135, 156);
+}
+
+.section__text--wide {
+	margin: 0;
+	margin-top: 1.2rem;
+}
+
+.section--no-padding {
+	padding: 0;
+}
+
+@media screen and (max-width: 750px) {
+	.section__text {
+		margin: 0;
+		margin-top: 1.2rem;
+	}
+}

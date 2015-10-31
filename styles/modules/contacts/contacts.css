@@ -1,0 +1,39 @@
+.contacts {
+	/*Box rules*/
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+
+	/*Decorations*/
+	background-color: rgb(47, 64, 82);
+}
+
+.contacts__section {
+	width: 50%;
+}
+
+.contacts__title {
+	/*Box rules*/
+	margin-bottom: 1rem;
+
+	/*Typography*/
+	font-family: "Lato", sans-serif;
+	font-weight: bold;
+	font-size: 1rem;
+	text-transform: uppercase;
+
+	/*Decorations*/
+	color: white;
+}
+
+.contacts__text,
+.contacts__list {
+	font-family: "Source Sans Pro", sans-serif;
+	font-size: .875rem;
+	color: rgb(163, 177, 191);
+	margin-bottom: 1rem;
+}
+
+.contacts__list li {
+	margin-bottom: 1rem;
+	padding-left: .5rem;
+}

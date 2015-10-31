@@ -1,0 +1,18 @@
+.main-nav__anchor:hover {
+	border: 2px solid rgb(230, 233, 237);
+	background-color: rgb(245, 247, 250);
+	color: rgb(0, 188, 156);
+}
+
+@media screen and (max-width: 900px) {
+	.main-nav.is-opened {
+		-webkit-transform:translateX(0);
+				transform:translateX(0);
+	}
+
+	.main-nav__anchor:hover {
+		border: 2px solid transparent;
+		background-color: inherit;
+		color: rgb(0, 188, 156);
+	}
+}

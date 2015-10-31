@@ -1,0 +1,19 @@
+.button {
+	/*Box rules*/
+	display: inline-block;
+	padding: 0.7rem 1.5rem;
+	margin-top: 2rem;
+
+	/*Typography*/
+	font-family: "Source Sans Pro", sans-serif;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 1.125rem;
+	font-weight: bold;
+
+	/*Decorations*/
+	color: white;
+	border-radius: 5px;
+	background-color: rgb(0, 188, 156);
+	box-shadow: 0 2px 0 -2px rgb(0, 160, 133);
+}

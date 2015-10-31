@@ -1,0 +1,51 @@
+.anime-bottom {
+	opacity: 0;
+	-webkit-transform: translateY(50px);
+	-webkit-transition: all 500ms;
+			transform: translateY(50px);
+			transition: all 500ms;
+}
+
+.anime-top {
+	opacity: 0;
+	-webkit-transform: translateY(-50px);
+	-webkit-transition: all 500ms;
+			transform: translateY(-50px);
+			transition: all 500ms;
+}
+
+.anime-right {
+	position: relative;
+	opacity: 0;
+	-webkit-transform: translateX(150px);
+	-webkit-transition: all 0.8s ease-out;
+			transform: translateX(150px);
+			transition: all 0.8s ease-out;
+}
+
+.anime-left {
+	position: relative;
+	opacity: 0;
+	-webkit-transform: translateX(-150px);
+	-webkit-transition: all 0.8s ease-out;
+			transform: translateX(-150px);
+			transition: all 0.8s ease-out;
+}
+
+.anime-round-left {
+	position: relative;
+	opacity: 0;
+	-webkit-transform: translateX(-150px) rotate(-60deg);
+	-webkit-transition: all 0.8s ease-out;
+			transform: translateX(-150px) rotate(-60deg);
+			transition: all 0.8s ease-out;
+}
+
+.anime-round-right {
+	position: relative;
+	opacity: 0;
+	-webkit-transform: translateX(150px) rotate(60deg);
+	-webkit-transition: all 0.8s ease-out;
+			transform: translateX(150px) rotate(60deg);
+			transition: all 0.8s ease-out;
+}

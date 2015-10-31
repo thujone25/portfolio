@@ -1,0 +1,29 @@
+.main-header {
+	/*Decorations*/
+	border-bottom: 2px solid rgb(230, 233, 237);
+	color: rgb(80, 106, 133);
+	background-color: white;
+
+	/*Other*/
+	-webkit-transition: all 700ms;
+			transition: all 700ms;
+}
+
+.main-header__logo {
+	-webkit-transition: all 700ms;
+			transition: all 700ms;
+}
+
+.main-header__logo img {
+	width: 100%;
+	max-width: 100%;
+}
+
+.main-header__nav {
+	/*Typography*/
+	text-align: right;
+
+	/*Other*/
+	-webkit-transition: all 700ms;
+			transition: all 700ms;
+}

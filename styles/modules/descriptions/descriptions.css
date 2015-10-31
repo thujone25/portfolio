@@ -1,0 +1,58 @@
+.descriptions {
+	/*Box rules*/
+	margin-top: 1.5rem;
+
+	/*Typography*/
+	text-align: left;
+}
+
+.descriptions__post {
+	padding-left: 5rem;
+	width: 33.333333%;
+}
+
+.descriptions__post h3 {
+	/*Box rules*/
+	margin-bottom: 2rem;
+
+	/*Typography*/
+	font-family: "Lato", sans-serif;
+	font-weight: bold;
+	font-size: 1.25rem;
+
+	/*Decorations*/
+	color: rgb(80, 106, 133);
+}
+
+.descriptions__post p {
+	/*Typography*/
+	font-size: 1.15rem;
+
+	/*Decorations*/
+	color: rgb(115, 135, 156);
+}
+
+.descriptions__post--heart {
+	background: url(images/icon-heart.png) 0 0 no-repeat;
+}
+
+.descriptions__post--bulb {
+	background: url(images/icon-lamp.png) 0 0 no-repeat;
+}
+
+.descriptions__post--star {
+	background: url(images/icon-star.png) 0 0 no-repeat;
+}
+
+@media screen and (max-width: 750px) {
+	.descriptions__post {
+		width: 100%;
+		margin-bottom: 1rem;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.descriptions__post {
+		padding-left: 7rem;
+	}
+}

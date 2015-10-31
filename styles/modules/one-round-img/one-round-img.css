@@ -1,0 +1,39 @@
+.one-round-img {
+	padding-top: 4rem;
+	padding-bottom: 4rem;
+	display: inline-block;
+	width: 100%;
+}
+
+.one-round-img__img-cont {
+	max-width: 25%;
+}
+
+.one-round-img--to-left {
+	background-color: rgb(242, 245, 247);
+	background-image: -webkit-linear-gradient(to bottom, rgb(230, 233, 237), white);
+	background-image: -moz-linear-gradient(to bottom, rgb(230, 233, 237), white);
+	background-image: -ms-linear-gradient(to bottom, rgb(230, 233, 237), white);
+	background-image: -o-linear-gradient(to bottom, rgb(230, 233, 237), white);
+	background-image: linear-gradient(to bottom, rgb(230, 233, 237), white);
+}
+
+.one-round-img--to-right {
+	background-color: rgb(230, 233, 237);
+}
+
+.one-round-img__img-cont--to-left {
+	float: left;
+}
+
+.one-round-img__img-cont--to-right {
+	float: right;
+}
+
+.one-round-img__text--to-left {
+	margin-left: 32%;
+}
+
+.one-round-img__text--to-right {
+	margin-right: 32%;
+}

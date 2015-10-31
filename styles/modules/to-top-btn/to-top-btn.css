@@ -1,0 +1,22 @@
+.to-top-btn {
+	/*Position*/
+	position: fixed;
+	bottom: 2rem;
+	right: 2rem;
+
+	/*Box rules*/
+	width: 3rem;
+	height: 3rem;
+
+	/*Decorations*/
+	background-color: rgba(40, 54, 69, 0.5);
+	background-image: url(images/icon-up.png);
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	border-radius: 10px;
+	opacity: 0;
+
+	/*Other*/
+	-webkit-transition:all 1000ms;
+			transition:all 1000ms;
+}

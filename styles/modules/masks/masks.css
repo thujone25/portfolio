@@ -1,0 +1,67 @@
+.mask__container {
+	position: relative;
+}
+
+.mask {
+	/*Position*/
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    		transform: translate(-50%,-50%);
+
+	/*Box rules*/
+	width: 100%;
+
+	/*Typography*/
+	text-align: center;
+
+	/*Decorations*/
+	opacity: 0;
+	background-color: rgba(0, 188, 156, 0.7);
+	border-radius: 50%;
+}
+
+.mask--round {
+	border-radius: 50%;
+}
+
+.mask:after {
+	/*Box rules*/
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+
+	/*Other*/
+	content: '';
+}
+
+.mask:before {
+	/*Box rules*/
+	display: inline-block;
+	height: 2rem;
+	width: 2rem;
+	vertical-align: middle;
+
+	/*Decorations*/
+	opacity: 0;
+	background: url(images/icon-plus.png) 50% 50% no-repeat;
+	
+	/*Other*/
+	content: '';
+	-webkit-transform: scale(2);
+	-webkit-transition: all 200ms;
+			transform: scale(2);
+			transition: all 200ms;
+}
+
+.mask:hover {
+	opacity: 1;
+}
+
+.mask:hover:before {
+	opacity: 1;
+	-webkit-transform: scale(1);
+			transform: scale(1);
+}

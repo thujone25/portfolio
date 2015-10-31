@@ -1,0 +1,38 @@
+.footer-bottom {
+	/*Box rules*/
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+
+	/*Decorations*/
+	background-color: rgb(40, 54, 69);
+}
+
+.footer-bottom__section {
+	width: 50%;
+}
+
+.footer-bottom__copy,
+.footer-bottom__list {
+	font-family: "Source Sans Pro", sans-serif;
+	color: rgb(112, 126, 140);
+	font-size: .875rem;
+}
+
+.footer-bottom__list {
+	text-align: right;
+}
+
+.footer-bottom__list a {
+	/*Box rules*/
+	display: inline-block;
+	padding: 0 1rem;
+
+	/*Typography*/
+	text-transform: capitalize;
+}
+
+@media screen and (max-width: 600px) {
+	.footer-bottom {
+		display: none;
+	}
+}

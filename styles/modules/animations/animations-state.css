@@ -1,0 +1,5 @@
+.is-appear {
+	opacity: 1 !important;
+	-webkit-transform: rotate(0deg) translate(0,0) scale(1) !important;
+			transform: rotate(0deg) translate(0,0) scale(1) !important;
+}

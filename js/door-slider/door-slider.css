@@ -1,0 +1,252 @@
+/*Element with class "js-slider" should be the container of slider.
+Specific styles and rules should be set up manualy in door-slider.css file.
+door-slider.js just set up and adjust behaviour of slider and default styles and layout.
+If you want to create door-slider, you should call doorSlider(arr, [wrapper]) function with one or two param:
+	arr - array of objects with proper information 
+		([
+			{
+				img: ... (path to slider img),
+				content: [{html: {tag: %some tag%, classes: %your classes for this tag from door-slider.css%}, content: "%some text%"},
+							{html: {tag: %some tag%, classes: %your classes for this tag from door-slider.css%}, content: "%some text%"},
+							{html: {tag: %some tag%, classes: %your classes for this tag from door-slider.css%}, content: "%some text%"}
+						], (array of object with information for content in particular slide; if no content required, pass empty array)
+
+			},
+			{
+				img: ... (path to slider img),
+				content: [{html: {tag: %some tag%, classes: %your classes for this tag from door-slider.css%}, content: "%some text%"},
+							{html: {tag: %some tag%, classes: %your classes for this tag from door-slider.css%}, content: "%some text%"},
+							{html: {tag: %some tag%, classes: %your classes for this tag from door-slider.css%}, content: "%some text%"}
+						], (array of object with information for content in particular slide; if no content required, pass empty array)
+
+			},
+			{
+				img: ... (path to slider img),
+				content: [{html: {tag: %some tag%, classes: %your classes for this tag from door-slider.css%}, content: "%some text%"},
+							{html: {tag: %some tag%, classes: %your classes for this tag from door-slider.css%}, content: "%some text%"},
+							{html: {tag: %some tag%, classes: %your classes for this tag from door-slider.css%}, content: "%some text%"}
+						], (array of object with information for content in particular slide; if no content required, pass empty array)
+
+			}
+		]);
+		wrapper [optionaly] - should be Boolean value. If true, script will create container with class "l-wrapper" for restricting width of content. 
+		This class should be include to door-slider.css.*/
+
+
+/*===================================================================================
+	DEFAULT RULES
+=====================================================================================*/
+
+/*======GRID======*/
+.slider-l-el { 
+	display: inline-block;
+	width: 100%;
+	letter-spacing: normal;
+	line-height: normal;
+	vertical-align: middle;/*======customizable property or create special class for this property======*/
+	font-size: 1rem;
+}
+
+.slider-l-cont { 
+	font-family: Arial, sans-serif;
+	font-size: 16px;
+	letter-spacing: -.28em;
+	line-height: 0;
+}
+
+.slider-l-cont:after {
+	content: '';
+	display: inline-block;
+	height: 100%;
+	width: 0px;
+	background-color: red;
+	vertical-align: middle;
+}
+
+/*======SIGNIFICANT RULES======*/
+.js-slider {
+	position: relative;
+	overflow: hidden;
+
+	height: 500px;/*======customizable property======*/
+}
+
+.js-slider__preload {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	z-index: -99999;
+	width: 0;
+	height: 0;
+}
+
+.js-slider__one-slide {
+	/*Box rules*/
+	width: 100%;
+	height: 100%;
+
+	/*Decoration*/
+	background-size: cover;
+	opacity: 0;
+	-webkit-transform: scale(0.3);
+	-webkit-transition: all 0.8s ease-out;
+			transform: scale(0.3);
+			transition: all 0.8s ease-out;
+}
+
+.js-slider__one-slide.is-appeared {
+	opacity: 1 !important;
+	-webkit-transform: scale(1) !important;
+			transform: scale(1) !important;
+}
+
+.js-slider__one-slide.is-trans {
+	background: transparent !important;
+}
+
+.js-slider__left-door {
+	/*Position*/
+	position: absolute;
+	left: 0;
+	top: 0;
+
+	/*Box rules*/
+	display: block;
+	width: 50%;
+	height: 100%;
+	
+	/*Other*/
+	-webkit-transition: all 0.5s ease-in;
+			transition: all 0.5s ease-in;
+}
+
+.js-slider__left-door.is-sliding {
+	opacity: 0;
+	-webkit-transform: translateX(-250px);
+			transform: translateX(-250px);
+}
+
+.js-slider__right-door {
+	/*Position*/
+	position: absolute;
+	left: 50%;
+	top: 0;
+
+	/*Box rules*/
+	display: block;
+	width: 50%;
+	height: 100%;
+	
+	/*Other*/
+	background-position: 100% 0;
+	-webkit-transition: all 0.5s ease-in;
+			transition: all 0.5s ease-in;
+}
+
+.js-slider__right-door.is-sliding {
+	opacity: 0;
+	-webkit-transform: translateX(250px);
+			transform: translateX(250px);
+}
+
+.js-slider *.is-hidden  {
+	display: none !important;
+}
+
+/*======animation for content elements======*/
+.slider-anime-right {
+	position: relative;
+	opacity: 0;
+	-webkit-transform: translateX(150px);
+	-webkit-transition: all 0.8s ease-out;
+			transform: translateX(150px);
+			transition: all 0.8s ease-out;
+}
+
+.slider-anime-left {
+	position: relative;
+	opacity: 0;
+	-webkit-transform: translateX(-150px);
+	-webkit-transition: all 0.8s ease-out;
+			transform: translateX(-150px);
+			transition: all 0.8s ease-out;
+}
+.slider-appear {
+	opacity: 1 !important;
+	-webkit-transform: rotate(0deg) translate(0,0) scale(1) !important;
+			transform: rotate(0deg) translate(0,0) scale(1) !important;
+}
+
+/*===================================================================================
+	CUSTOM RULES
+=====================================================================================*/
+
+.slider-l-wrapper {
+	width: 100%;
+	padding-left:7%;
+	padding-right:7%;
+	max-width: 1980px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.js-slider__title {
+	font-family: 'Lato', sans-serif;
+	font-weight: 900;
+	text-transform: uppercase;
+	color: white;
+}
+
+.js-slider__text {
+	/*Box rules*/
+	margin: 0 15%;
+	margin-top: 1rem;
+
+	/*Typography*/
+	font-family: "Source Sans Pro", sans-serif;
+
+	/*Decoration*/
+	color: rgb(163, 177, 191);
+}
+
+@media screen and (min-width: 1600px) {
+	.js-slider__title {
+		font-size: 6rem;
+	}
+
+	.js-slider__text {
+		font-size: 3rem;
+	}
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1599px){
+	.js-slider__title {
+		font-size: 4rem;
+	}
+
+	.js-slider__text {
+		font-size: 2rem;
+	}
+}
+
+@media screen and (min-width: 700px) and (max-width: 1000px){
+	.js-slider__title {
+		font-size: 3rem;
+	}
+
+	.js-slider_text {
+		font-size: 1.5rem;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.js-slider__title {
+		font-size: 2rem;
+	}
+
+	.js-slider__text {
+		margin: 0;
+		margin-top: 1rem;
+		font-size: 1rem;
+	}
+}

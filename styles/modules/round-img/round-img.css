@@ -1,0 +1,12 @@
+.round-img {
+	border-radius: 50%;
+	box-shadow: 0 0 0 1rem rgba(47, 64, 82, 0.45);
+}
+
+.round-img--size-100 {
+	max-width: 100%;
+}
+
+.round-img--size-70 {
+	max-width: 70%;
+}

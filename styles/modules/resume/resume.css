@@ -1,0 +1,34 @@
+.resume-section {
+	/*Box rules*/
+	margin-top: 2rem;
+	padding-top: 2rem;
+
+	/*Typography*/
+	text-align: left;
+
+	/*Decorations*/
+	border-top: 2px solid rgb(230, 233, 237);
+}
+
+.resume-section__one-side {
+	width: 50%;
+}
+
+.life-info {
+	margin-bottom: 2rem;
+}
+
+.life-info__title {
+	font-size: 1.5rem;
+	color: rgb(80, 106, 133);
+	font-family: "Lato", sans-serif;
+}
+
+.life-info__text {
+	font-size: .875rem;
+	color: rgb(115, 135, 156);
+}
+
+.life-info__text--big {
+	font-size: 1.15rem;
+}

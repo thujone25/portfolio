@@ -1,0 +1,25 @@
+.four-round-imgs {
+	/*Box rules*/
+	padding-top: 5rem;
+	padding-bottom: 5rem;
+
+	/*Decorations*/
+	background-image: -webkit-linear-gradient(to bottom, white, rgb(230, 233, 237));
+	background-image: -moz-linear-gradient(to bottom, white, rgb(230, 233, 237));
+	background-image: -ms-linear-gradient(to bottom, white, rgb(230, 233, 237));
+	background-image: -o-linear-gradient(to bottom, white, rgb(230, 233, 237));
+	background-image: linear-gradient(to bottom, white, rgb(230, 233, 237));
+}
+
+.four-round-imgs__section {
+	width: 25%;
+}
+
+.four-round-imgs__img-cont {
+	margin-bottom: 3rem;
+	text-align: center;
+}
+
+.four-round-imgs__text {
+	padding-right: 5%;
+}

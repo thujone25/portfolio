@@ -1,0 +1,42 @@
+@media screen and (max-width: 900px) {
+	.sandwich {
+		display: inline-block;
+	}
+
+	.sandwich.is-opened {
+		/*Position*/
+		position: fixed;
+		right: 7%;
+		top: 1rem;
+		z-index: 200;
+
+		/*Decorations*/
+		border-color: rgb(0, 188, 156);
+	}
+
+	.sandwich.is-opened:before {
+		/*Position*/
+		left: 18px;
+		top: 12px;
+		
+		/*Box rules*/
+		width: 12px;
+
+		/*Other*/
+		-webkit-transform:rotate(50deg);
+				transform: rotate(50deg);
+	}
+
+	.sandwich.is-opened:after {
+		/*Position*/
+		left: 18px;
+		top: 24px;
+		
+		/*Box rules*/
+		width: 12px;
+
+		/*Other*/
+		-webkit-transform:rotate(-50deg);
+				transform: rotate(-50deg);
+	}
+}
